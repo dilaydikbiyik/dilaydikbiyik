@@ -13,7 +13,7 @@ I'm a senior (4th-year) Computer Engineering student at Kocaeli University, and 
 
 | Project | What it does | Built with |
 | --- | --- | --- |
-| [**Lumos**](https://github.com/dilaydikbiyik/Lumos) ([live](https://lumos-sooty.vercel.app)) | An assistant that walks first-time investors through risk profiling and portfolio building, backed by a swappable LLM layer (Claude or Gemini) instead of being locked to one provider | FastAPI · React · Claude/Gemini APIs |
+| [**Lumos**](https://github.com/dilaydikbiyik/Lumos) ([live](https://lumos-sooty.vercel.app)) | An assistant that walks first-time investors through risk profiling and portfolio building, backed by a free-tier LLM chain (Gemini, with Groq and OpenRouter as automatic fallbacks) instead of being locked to one provider | FastAPI · React · Gemini/Groq/OpenRouter APIs |
 | [**keyword-extractor**](https://github.com/dilaydikbiyik/keyword-extractor) | Pulls sector-aware keywords out of German business text without labeled data, using the NACE Rev. 2 taxonomy as a guide — 80% top-1 accuracy on ~10K records | Python · KeyBERT · Sentence-Transformers |
 | [**product-genai-pipeline**](https://github.com/dilaydikbiyik/product-genai-pipeline) | Turns bare product titles into descriptions (T5), predicted categories, and clusters of similar listings | Python · Transformers · Google Colab |
 | [**diabetesTrackingSystem**](https://github.com/dilaydikbiyik/diabetesTrackingSystem) | Desktop app for patients and doctors to track blood sugar, diet, and exercise, with alerts and a diagnosis assistant | PyQt5 · SQLite · PostgreSQL |
