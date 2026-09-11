@@ -37,7 +37,7 @@ A zero-shot classifier is handed the names of its classes and nothing else. Rewr
 🔗 = repo lives on a teammate's account · 🤝 = built with a teammate
 
 <details>
-<summary><b>More projects</b> — coursework and team work outside the AI/NLP line</summary>
+<summary><b>More projects</b> — coursework and team work</summary>
 
 <br>
 
