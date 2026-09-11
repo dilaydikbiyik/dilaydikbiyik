@@ -2,8 +2,7 @@
 
 I'm a senior (4th-year) Computer Engineering student at Kocaeli University. I work on multilingual NLP — and, increasingly, on measuring where models and classifiers actually break rather than only building them.
 
-- 🔬 NLP/ML research at the **Kocaeli University Embedded Systems Laboratory** — a study I designed and ran there is now a first-author paper in preparation
-- 🎓 Graduation project: **SenseSign**, multi-modal Turkish Sign Language recognition, with [@onurakbas](https://github.com/onurakbas)
+- 🔬 NLP/ML research at the **Kocaeli University Embedded Systems Laboratory** 
 - 🏢 Previously **IT Project Student at BSH Home Appliances** (Aug 2025 – Sep 2026) — MuleSoft data integrations and AWS (Lambda, S3) for the PCM-Integration team
 - 🎻 Away from the keyboard: violin, sketching, and swimming
 
