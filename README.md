@@ -3,7 +3,7 @@
 I'm a senior (4th-year) Computer Engineering student at Kocaeli University. I work on multilingual NLP and on measuring where models and classifiers actually break — and I build the products those models sit inside. Most of what's below started as a university project and grew into something I kept iterating on.
 
 - 🔬 NLP/ML research at the **Kocaeli University Embedded Systems Laboratory** — a study I designed and ran there is now a first-author paper in preparation
-- 🏢 Previously **IT Project Student at BSH Home Appliances** (Aug 2025 – Sep 2026) — MuleSoft data integrations and AWS (Lambda, S3) for the PCM-Integration team
+- 🏢 Previously **IT Project Student at BSH Home Appliances** (Aug 2025 – Sep 2026) — MuleSoft data integrations and AWS (Lambda, S3, Athena) for the PCM-Integration team
 - 🤝 Some of the work below was built with teammates
 - 🎻 Away from the keyboard: violin, sketching, and swimming
 
@@ -28,31 +28,31 @@ A zero-shot classifier is handed the names of its classes and nothing else. Rewr
 
 | Project | What it does | Built with |
 | --- | --- | --- |
+| **SenseSign** 🤝 *(graduation project · private while in development)* | Bidirectional Turkish Sign Language communication — my idea and my research design. MediaPipe landmarks feed LSTM / Transformer / ST-GCN recognisers compared on a **signer-independent** split; an LLM layer turns gloss sequences into Turkish; an avatar path runs the other way. Evaluation is designed up front — modality and window-size ablations, BLEU/chrF/ROUGE-L with human rating and Cohen's κ, McNemar between model pairs. Landmark extraction runs in the browser, so raw video never leaves the client | Python · MediaPipe · FastAPI · React |
 | [**Lumos**](https://github.com/dilaydikbiyik/lumos) ([live](https://lumos-sooty.vercel.app)) | An assistant that walks first-time investors through risk profiling and portfolio building, backed by a free-tier LLM chain (Gemini, with Groq and OpenRouter as automatic fallbacks) instead of being locked to one provider. The model never does arithmetic — deterministic engines do, and tests enforce that boundary. Every return is shown real as well as nominal; a user carrying card debt is told to clear it first, above the portfolio rather than below it | FastAPI · React · Gemini/Groq/OpenRouter |
 | **unshackled-llm-bridge** *(private, in testing)* | A browser extension that moves a conversation — with its uploaded files and a portable context of your own — between ChatGPT, Claude and Gemini, entirely locally: no backend, no account, no telemetry. Six layers whose import boundaries are enforced by the linter and CI rather than by review; a typed message contract that fails to compile on a missing handler; DOM selectors shipped as remote config, so a platform restyle is fixed without waiting out a store review | TypeScript · Chrome Extensions · Playwright |
+| [**car-body-type-classifier**](https://github.com/onurakbas/car-body-type-classifier) 🤝 🔗 | Classifies vehicles into 8 body types — EfficientNetB3, **0.94 test Macro F1** on 12,250 curated images under a strict 95MB model-size constraint. I owned the data side: async scraping pipelines, multi-source dataset assembly and deduplication, and the EfficientNetB0/V2S baselines | Python · TensorFlow · Playwright |
+| [**geo-news-scraper**](https://github.com/onurakbas/geo-news-scraper) 🤝 🔗 | Tracks local news across Kocaeli: Scrapy spiders over 5 sites, rule-based NLP classification, deduplication by sentence-embedding similarity, and a 4-layer geocoding pipeline (regex → gazetteer → spaCy NER → Google Geocoding). I built the React + Google Maps dashboard with live filtering | Python · FastAPI · MongoDB |
 | [**product-genai-pipeline**](https://github.com/dilaydikbiyik/product-genai-pipeline) | Enriches bare e-commerce listings: description generation (T5), category prediction (TF-IDF + logistic regression), clustering of similar products (KMeans over TF-IDF and sentence embeddings), and long-text summarisation, with the full preprocessing and export pipeline around it | Python · Transformers |
-| [**diabetesTrackingSystem**](https://github.com/dilaydikbiyik/diabetesTrackingSystem) | Desktop app for patients and doctors to track blood sugar, diet and exercise, with alerts and a doctor-patient dashboard | PyQt5 · SQLite · PostgreSQL |
-| [**vehicle-security-and-control-system**](https://github.com/dilaydikbiyik/vehicle-security-and-control-system) | Arduino simulation of a car's safety electronics — seatbelt interlock, automatic headlights, temperature and fuel monitoring on an LCD | Arduino · C++ · Proteus |
 
-🔗 = repo lives on a teammate's account · 🤝 = built with a teammate
+🤝 = built with teammates · 🔗 = repo lives on a teammate's account
 
 <details>
-<summary><b>More projects</b> — coursework and team work</summary>
+<summary><b>More projects</b> — coursework and team work outside the AI/NLP line</summary>
 
 <br>
 
 | Project | What it does | Built with |
 | --- | --- | --- |
-| **SenseSign** *(private while in development)* | Bidirectional Turkish Sign Language communication. MediaPipe landmarks feed LSTM / Transformer / ST-GCN recognisers compared on a **signer-independent** split; an LLM layer turns gloss sequences into Turkish; an avatar path runs the other way. Evaluation is designed up front — modality and window-size ablations, BLEU/chrF/ROUGE-L with human rating and Cohen's κ, McNemar between model pairs. Landmark extraction runs in the browser, so raw video never leaves the client | Python · MediaPipe · FastAPI · React |
-| [**car-body-type-classifier**](https://github.com/onurakbas/car-body-type-classifier) 🔗 | Classifies vehicles into 8 body types — EfficientNetB3, **0.94 test Macro F1** on 12,250 curated images under a strict 95MB model-size constraint. I owned the data side: async scraping pipelines, multi-source dataset assembly and deduplication, and the EfficientNetB0/V2S baselines | Python · TensorFlow · Playwright |
-| [**geo-news-scraper**](https://github.com/onurakbas/geo-news-scraper) 🔗 | Tracks local news across Kocaeli: Scrapy spiders over 5 sites, rule-based NLP classification, deduplication by sentence-embedding similarity, and a 4-layer geocoding pipeline (regex → gazetteer → spaCy NER → Google Geocoding). I built the React + Google Maps dashboard with live filtering | Python · FastAPI · MongoDB |
-| [**wordCrush-mobile**](https://github.com/dilaydikbiyik/wordCrush-mobile) | An iOS word puzzle game with 8-directional swipe input, combo scoring and chain-reaction power tiles, backed by a Trie over 59K Turkish words for O(m) lookup and a background Isolate solvability solver | Flutter · Dart · Riverpod · ObjectBox |
-| [**CargoOperationsSystem**](https://github.com/dilaydikbiyik/CargoOperationsSystem) | Plans delivery routes over a real road network, solving a vehicle routing problem with the Clarke-Wright savings algorithm | FastAPI · React · Supabase |
-| [**GraphCite**](https://github.com/dilaydikbiyik/GraphCite) | Explores citation networks between papers — H-Index, H-Core, H-Median — through an interactive D3.js graph in a Swing/JavaFX hybrid UI, with a custom JSON parser | Java · JavaFX · D3.js |
-| [**lidar-geo-analysis**](https://github.com/dilaydikbiyik/lidar-geo-analysis) | Picks walls and corners out of 2D LiDAR point clouds with RANSAC, converts polar to Cartesian, and exports an SVG map. Covered by CTest unit tests | C++ · CMake |
-| [**student-schedule-system**](https://github.com/dilaydikbiyik/student-schedule-system) | Exam scheduling, seat planning and classroom/student management for a university department | PyQt5 · PostgreSQL |
-| [**sosyal-kutuphane-platformu**](https://github.com/mervebudakk/sosyal-kutuphane-platformu) 🔗 | A social cataloguing app for books and films — follow system, activity feed, the works | React · Supabase |
-| [**TowerDefenseGame**](https://github.com/onurakbas/TowerDefenseGame) 🔗 | A 2D cyberpunk tower defense game — tactical squads with distinct combat mechanics | Unity · C# |
+| [**wordCrush-mobile**](https://github.com/dilaydikbiyik/wordCrush-mobile) 🤝 | An iOS word puzzle game with 8-directional swipe input, combo scoring and chain-reaction power tiles, backed by a Trie over 59K Turkish words for O(m) lookup and a background Isolate solvability solver | Flutter · Dart · Riverpod · ObjectBox |
+| [**CargoOperationsSystem**](https://github.com/dilaydikbiyik/CargoOperationsSystem) 🤝 | Plans delivery routes over a real road network, solving a vehicle routing problem with the Clarke-Wright savings algorithm | FastAPI · React · Supabase |
+| [**GraphCite**](https://github.com/dilaydikbiyik/GraphCite) 🤝 | Explores citation networks between papers — H-Index, H-Core, H-Median — through an interactive D3.js graph in a Swing/JavaFX hybrid UI, with a custom JSON parser | Java · JavaFX · D3.js |
+| [**lidar-geo-analysis**](https://github.com/dilaydikbiyik/lidar-geo-analysis) 🤝 | Picks walls and corners out of 2D LiDAR point clouds with RANSAC, converts polar to Cartesian, and exports an SVG map. Covered by CTest unit tests | C++ · CMake |
+| [**student-schedule-system**](https://github.com/dilaydikbiyik/student-schedule-system) 🤝 | Exam scheduling, seat planning and classroom/student management for a university department | PyQt5 · PostgreSQL |
+| [**diabetesTrackingSystem**](https://github.com/dilaydikbiyik/diabetesTrackingSystem) | Desktop app for patients and doctors to track blood sugar, diet and exercise, with alerts and a doctor-patient dashboard | PyQt5 · SQLite · PostgreSQL |
+| [**vehicle-security-and-control-system**](https://github.com/dilaydikbiyik/vehicle-security-and-control-system) | Arduino simulation of a car's safety electronics — seatbelt interlock, automatic headlights, temperature and fuel monitoring on an LCD | Arduino · C++ · Proteus |
+| [**sosyal-kutuphane-platformu**](https://github.com/mervebudakk/sosyal-kutuphane-platformu) 🤝 🔗 | A social cataloguing app for books and films — follow system, activity feed, the works | React · Supabase |
+| [**TowerDefenseGame**](https://github.com/onurakbas/TowerDefenseGame) 🤝 🔗 | A 2D cyberpunk tower defense game — tactical squads with distinct combat mechanics | Unity · C# |
 
 </details>
 
@@ -115,7 +115,7 @@ A zero-shot classifier is handed the names of its classes and nothing else. Rewr
 
 ### 📄 A Few Programs I've Been Part Of
 
-Commencis Cloud Camp (AWS) · Üretken Akademi Kılavuz Kariyer (NVIDIA — AI Fundamentals & GPU Architecture) · Boğaziçi University DataCamp (NLP / CV / Big Data)
+Commencis Cloud Camp (AWS) · Üretken Akademi Kılavuz Kariyer (NVIDIA — AI Fundamentals & GPU Architecture) · Boğaziçi University DataCamp (NLP / CV / Big Data) · GSU Digital Leadership Academy · Schneider Electric Global Student Experience
 
 ---
 
